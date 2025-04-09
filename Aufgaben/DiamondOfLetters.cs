@@ -17,7 +17,7 @@ namespace Starter.Aufgaben
          A
      
      Aufgabe:
-     Schreibe den code der benötigt ist um ein Diamant auf Buchstaben ausgibt.
+     Schreibe den code der benötigt ist um einen Diamanten aus Buchstaben auszugeben.
      Der User soll eine Zahl eingeben. Basierend auf dieser Zahl soll die größe des Diamants angegeben werden.
      Beispiel: Der User gibt die Zahl 4 ein:
 
@@ -41,7 +41,7 @@ namespace Starter.Aufgaben
     {
         public void Run()
         {
-
+            Console.WriteLine("Diamond of letters");
         }
     }
 }

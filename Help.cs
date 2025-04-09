@@ -379,6 +379,37 @@
 
         #endregion
 
+        #region Konsolen Werkzeuge
+
+        //====================================================
+        //                Konsolen Werkzeuge
+        //====================================================
+
+        void ConsoleTools()
+        {
+
+            //Ausgabe von einer vollständigen Zeile inklusive Zeilenumbruch
+            Console.WriteLine("abc");
+            Console.WriteLine("def");
+            //Die Ausgabe wäre also so:
+            //abc
+            //def
+
+
+            //Schreibt in die Ausgabe der Konsole. Jedes weitere mal wenn Write() aufgerufen wird, wird der Wert in der gleichen Zeile an den bereits vorhandenen Inhalt heran gehängt.
+            Console.Write("abc");
+            Console.Write("def");
+            //Die Ausgabe wäre also so:
+            //abcdef
+
+
+            //Die Konsolenapplikation wartet darauf, dass der Benutzer enter drückt. Die Applikation läuft nicht weiter bis dies passiert ist. Anschließend wird der Wert,
+            //der eingegeben wurde, zurückgegeben und kann in einer variable gespeichert werden.
+            string result = Console.ReadLine();
+        }
+
+        #endregion
+
         #region Oft verwendete Werkzeuge
 
         //====================================================
@@ -442,24 +473,7 @@
         }
 
 
-        //====================================================
-        //                Konsolen Werkzeuge
-        //====================================================
-
-        void ConsoleTools()
-        {
-
-            //Ausgabe von einer vollständigen Zeile inklusive Zeilenumbruch
-            Console.WriteLine();
-
-            //Schreibt in die Ausgabe der Konsole. Jedes weitere mal wenn Write() aufgerufen wird, wird der Wert in der gleichen Zeile an den bereits vorhandenen Inhalt heran gehängt.
-            Console.Write("asd");
-            Console.Write("def");
-
-            //Die Konsolenapplikation wartet darauf, dass der Benutzer enter drückt. Die Applikation läuft nicht weiter bis dies passiert ist. Anschließend wird der Wert,
-            //der eingegeben wurde, zurückgegeben und kann in einer variable gespeichert werden.
-            string result = Console.ReadLine();
-        }
+        
 
         #endregion
 

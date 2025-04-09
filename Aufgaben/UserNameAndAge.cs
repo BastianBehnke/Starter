@@ -17,7 +17,7 @@ namespace Starter.Aufgaben
     {
         public void Run()
         {
-
+            Console.WriteLine("Username and age");
         }
     }
 }
