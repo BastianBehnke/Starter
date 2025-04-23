@@ -6,8 +6,25 @@
         #region Datentypen
 
         //====================================================
-        //           Häufig verwendete Datentypen
+        //           Häufig verwendete Datentypen / Variablen und Felder
         //====================================================
+
+        //Um eine Variable bzw. ein Feld zu verwenden muss dies zunächst deklariert werden. Ohne die Variable bzw. das Feld zu initialisieren kann diese jedoch nicht verwendet werden.
+        //Die deklaration bezeichnet die Bekanntmachung einer Variable bzw. eines Feldes. Die Initialisierung weist einen Wert zu.
+        
+        void DeklarationUndInitialisierung()
+        {
+            //Deklaration:
+            string myString;
+
+            //Initialisierung
+            myString = "my value";
+
+            //Die Initialisierung kann auch direkt bei der deklaration passieren
+            string myNewString = "my new value";
+        }
+        
+        
 
         //Ein einziges Zeichen
         char Character;
@@ -17,7 +34,7 @@
         string Zeichenkette;
         string ZeichenKetteInitialisiert = "Meine Zeichenkette";
 
-                //Ein ID format (f54829d6-b384-4230-9a6d-5bf183fa0f84)
+        //Ein ID format (f54829d6-b384-4230-9a6d-5bf183fa0f84)
         Guid Uid;
         Guid UidInitialisiert = Guid.NewGuid();
 
@@ -28,6 +45,18 @@
         //Boolean: Entweder true oder false
         bool State;
         bool StateInitialisiert = true;
+
+
+        //Datum & Zeit
+        //DateTime - beinhaltet Datum und Zeit
+        DateTime now = DateTime.Now;
+
+        //DateOnly - Beinhaltet nur das Datum
+        DateOnly today = DateOnly.FromDateTime(DateTime.Now);
+
+        //TimeOnly - beinhaltet nur die Zeit
+        TimeOnly timeNow = TimeOnly.FromDateTime(DateTime.Now);
+
 
         //====================================================
         //                      Arrays
@@ -45,6 +74,23 @@
         //bool array
         bool[] boolArray = new bool[10];
 
+
+        //Ein Array kann entweder initialisiert werden und anschließend durch den Algorythmus mit Daten gefüllt werden oder direkt bei der initialisierung.
+        //Dabei muss keine größe des Arrays angegeben werden. Die größe wird automatisch durch die anfänglichen Daten ermittelt
+        string[] myStringArray = new string[]
+        {
+            "firstString",
+            "secondsString",
+            "thirdString",
+        };
+
+        int[] myIntArray = new int[]
+        {
+            1,
+            2,
+            3,
+        };
+
         //Auf array inhalt zugreifen:
         //Man muss sich ein array wie eine tabelle vorstellen.
         //Um nun auf den inhalt einer zeile zuzugreifen wird der index, also die tabllenzeile angegeben.
@@ -56,9 +102,11 @@
 
         void ArrayBeispiel()
         {
+            //in das string array wird "Mein string" in index 1 (das zweite Element) geschrieben 
             ZeichenkettenArray[1] = "Mein string";
             string ZeichenkettenWertVonArray = ZeichenkettenArray[1];
 
+            //in das int array wird 9 in index 0 (das erste element) geschrieben 
             IntArray[0] = 9;
             int IntVonArray = IntArray[0];
 
@@ -72,8 +120,6 @@
             //Man kann also das Zeichen an einer Position ermitteln, jedoch nicht das Zeichen an einer
             //Position austauschen
             char eCharacter = myString[3];
-
-
         }
 
         #endregion
@@ -84,25 +130,39 @@
         //              Methoden und Funktionen
         //====================================================
 
-        //void ist ein spezieller Datentyp der nur bei Methoden valide ist. void Bezeichnet, dass die Methode nichts zurück gibt.
+        //void ist ein spezieller Datentyp der nur bei Methoden verwendet werden kann. void Bezeichnet, dass die Methode keinen Rückgabewert hat.
         public void ReturnNothing()
         {
             Console.WriteLine("This method does not return anything but executes some code");
         }
 
 
-        //Diese Funktion gibt einen int wert zurück
+        //Diese Funktion gibt einen int Wert zurück
         public int ReturnInt()
         {
             return 1;
         }
 
+        public int ReturnInt1()
+        {
+            int myInt = 1;
+            return myInt;
+        }
 
-        //Diese Funktion gibt einen string wert zurück
+
+        //Diese Funktion gibt einen string Wert zurück
         public string ReturnString()
         {
             return "This string is about to get returned!";
         }
+
+        public string ReturnString1()
+        {
+            string myString = "my value";
+            return myString;
+        }
+
+        //Eine Methode kann jeden beliebigen Datentyp zurück geben.
 
         #endregion
 
@@ -117,6 +177,8 @@
          * Public: Die Methode/Funktion/Variable ist immer verfügbar
          * Private: Die Methode/Funktion/Variable ist nur innerhalb der Class verfügbar. Alles was keinen Accessor angegben hat ist ebenfalls private
          * Internal: Die Methode/Funktion/Variable ist nur innerhalb der Assembly bzw. innerhalb des Projekts verfügbr
+         * 
+         * Accessor können nur bei einer Class, Variablen einer Class oder für Methoden verwendet werden, jedoch nicht innerhalb von methoden
          */
 
 
@@ -406,6 +468,19 @@
             //Die Konsolenapplikation wartet darauf, dass der Benutzer enter drückt. Die Applikation läuft nicht weiter bis dies passiert ist. Anschließend wird der Wert,
             //der eingegeben wurde, zurückgegeben und kann in einer variable gespeichert werden.
             string result = Console.ReadLine();
+
+
+            //Farben wechseln
+            //Die Farbe der Ausgabe kann so geändert werden
+            //Schriftfarbe
+            Console.ForegroundColor = ConsoleColor.Red;
+
+            //Hintergrundfarbe
+            Console.BackgroundColor = ConsoleColor.Red;
+
+            //Die Einstellungen können so zurück gesetzt werden
+            Console.ResetColor();
+
         }
 
         #endregion

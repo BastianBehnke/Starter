@@ -2,6 +2,7 @@
  * Dies ist ein using Statement. Ein using Statement wird verwendet um andere Namespaces verfügbar zu machen. using Statements wirken sich ausschließlich auf die aktuelle Datei aus.
  */
 using Starter.Aufgaben;
+using Starter.Beispiel;
 
 /*
  * Dies ist der Namespace. Ein Namespace ist ein Bereich in dem Dinge bekannt sind. In diesem Fall heißt der Namespace "Starter".
@@ -22,7 +23,7 @@ namespace Starter
         static void Main(string[] args)
         {
             //Hier beginnt das Program
-            ITask task = new UserNameAndAge();
+            ITask task = new SimpleCalculator();
             task.Run();
         }
     }
