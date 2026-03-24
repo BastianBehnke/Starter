@@ -23,7 +23,7 @@ namespace Starter
         static void Main(string[] args)
         {
             //Hier beginnt das Program
-            ITask task = new SimpleCalculator();
+            ITask task = new UserNameAndAge();
             task.Run();
         }
     }
